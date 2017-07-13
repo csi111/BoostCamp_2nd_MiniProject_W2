@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/anim/abc_slide_out_bottom.xml"
+    }
+]
