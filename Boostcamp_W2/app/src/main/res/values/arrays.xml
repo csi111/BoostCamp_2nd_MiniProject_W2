@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_name">
+        <item>거리순</item>
+        <item>인기순</item>
+        <item>최근순</item>
+    </string-array>
+
+    <string-array name="list_title">
+        <item>탄탄면공방</item>
+        <item>대만락카스테라</item>
+        <item>서현실비</item>
+        <item>능라도</item>
+        <item>진진반상</item>
+        <item>스시쿤</item>
+        <item>백미당</item>
+    </string-array>
+
+
+    <string-array name="list_content">
+        <item>줄서서먹는,여자친구랑,간식,혼술,아침식사</item>
+        <item>얼큰한,줄서서먹는,매운맛,칼칼한,해장,점심식사</item>
+        <item>식신로드,줄서서먹는,생생정보통,불맛,8090,조용한분위기,연중무휴</item>
+        <item>수요미식회,단아한,노포,미식가,피로연,담백한맛,월요일휴무</item>
+        <item>다양한반찬,많은반찬,푸짐한밥상,상견례,가족모임,손님접대,점심</item>
+        <item>가성비좋은,좋은식재료,차분한,불향,럭셔리,점심회식,런치스시</item>
+        <item>줄서서먹는,간판없는집,스타쉐프,테이크아웃,간식,로맨틱,런치</item>
+    </string-array>
+
+    <integer-array name="list_img">
+        <item>@drawable/restaurant1</item>
+        <item>@drawable/restaurant2</item>
+        <item>@drawable/restaurant3</item>
+        <item>@drawable/restaurant4</item>
+        <item>@drawable/restaurant5</item>
+        <item>@drawable/restaurant6</item>
+        <item>@drawable/restaurant7</item>
+    </integer-array>
+
+    <integer-array name="list_distance">
+        <item>11</item>
+        <item>15</item>
+        <item>7</item>
+        <item>6</item>
+        <item>30</item>
+        <item>22</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="list_popular">
+        <item>55</item>
+        <item>33</item>
+        <item>66</item>
+        <item>22</item>
+        <item>77</item>
+        <item>11</item>
+        <item>44</item>
+    </integer-array>
+
+    <integer-array name="list_postdate">
+        <item>20150811</item>
+        <item>20161111</item>
+        <item>20150514</item>
+        <item>20170615</item>
+        <item>20161216</item>
+        <item>20150317</item>
+        <item>20120418</item>
+    </integer-array></resources>
