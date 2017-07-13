@@ -8,16 +8,13 @@ public class ItemData {
     String name;
     int img;
     String description;
-    int popularity;
-    int distance;
     int check;
 
-    public ItemData(String name, int img, String description, int popularity, int distance, int check) {
+
+    public ItemData(String name, int img, String description, int check) {
         this.name = name;
         this.img = img;
         this.description = description;
-        this.popularity = popularity;
-        this.distance = distance;
         this.check = check;
     }
 
@@ -43,22 +40,6 @@ public class ItemData {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getPopularity() {
-        return popularity;
-    }
-
-    public void setPopularity(int popularity) {
-        this.popularity = popularity;
-    }
-
-    public int getDistance() {
-        return distance;
-    }
-
-    public void setDistance(int distance) {
-        this.distance = distance;
     }
 
     public int getCheck() {

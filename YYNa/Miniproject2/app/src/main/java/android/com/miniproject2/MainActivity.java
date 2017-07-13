@@ -1,32 +1,42 @@
 package android.com.miniproject2;
 
+import android.com.miniproject2.model.ItemData;
+import android.com.miniproject2.view.RecyclerAdapter;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView mainText;
 
-    String tmp ="";
+    ArrayList<ItemData> itemDatas;
+    LinearLayoutManager linearLayoutManager;
+    SwipeRefreshLayout swipeRefreshLayout;
+    RecyclerAdapter recyclerAdapter;
+    RecyclerView recyclerView;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        mainText = (TextView) findViewById(R.id.mainText);
 
-
-
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -37,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        makedata();
 //
 //        DBAdapter db = new DBAdapter(this);
 ////---add a contact---
@@ -58,6 +68,31 @@ public class MainActivity extends AppCompatActivity
 //        mainText.setText(tmp);
 
 
+
+    }
+
+    private void makedata() {
+
+
+        linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+
+
+
+
+
+        // add data
+        itemDatas = new ArrayList<ItemData>();
+        itemDatas.add(new ItemData("맛집1",R.drawable.photo,"설명?",R.drawable.check));
+        itemDatas.add(new ItemData("맛집2",R.drawable.photo,"설명?",R.drawable.checked));
+        itemDatas.add(new ItemData("맛집3",R.drawable.photo,"설명?",R.drawable.check));
+        itemDatas.add(new ItemData("맛집4",R.drawable.photo,"설명?",R.drawable.checked));
+
+
+        recyclerAdapter = new RecyclerAdapter(itemDatas, this);
+        recyclerView.setAdapter(recyclerAdapter);
 
     }
 
