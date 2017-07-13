@@ -6,5 +6,6 @@
     <color name="white">#FFF</color>
     <color name="black">#000</color>
     <color name="tabSelected">#54BD54</color>
+    <color name="explanation">#c1c1c1</color>
 
 </resources>

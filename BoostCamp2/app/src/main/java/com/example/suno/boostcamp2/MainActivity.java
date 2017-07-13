@@ -1,12 +1,9 @@
 package com.example.suno.boostcamp2;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,19 +12,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    TabLayout tabLayout;
-    Toolbar toolbar;
-    ViewPager viewPager;
-    DrawerLayout drawer;
-    NavigationView navigationView;
+    private TabLayout tabLayout;
+    private Toolbar toolbar;
+    private ViewPager viewPager;
+    private ToggleButton tgBtnRange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +30,9 @@ public class MainActivity extends AppCompatActivity
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        init();
+        tabLayoutInit();
     }
 
     @Override
@@ -107,11 +103,46 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void init(){
+    public void tabLayoutInit(){
         tabLayout.addTab(tabLayout.newTab().setText("거리순"));
         tabLayout.addTab(tabLayout.newTab().setText("인기순"));
         tabLayout.addTab(tabLayout.newTab().setText("최근순"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         viewPager.setAdapter(new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
+        //ViewPager의 페이지가 스크롤 될 때 이를 TabLayout에게 알리기 위한 용도
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        tgBtnRange = (ToggleButton)findViewById(R.id.toggleBtn_range);
+        tgBtnRange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(tgBtnRange.isChecked()){
+                    Toast.makeText(MainActivity.this, "isChecked!", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "unChecked!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
     }
 }

@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.suno.boostcamp2.fragment.BaseFragment;
+import com.example.suno.boostcamp2.fragment.FamousPlaceFragment;
+
 /**
  * Created by suno on 2017. 7. 13..
  */
@@ -20,9 +23,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return;
+                return new FamousPlaceFragment();
             case 1:
-                return;
+                return new FamousPlaceFragment();
             default:
                 return new BaseFragment();
         }

@@ -30,21 +30,42 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:background="@color/white"
             android:orientation="horizontal">
 
-            <android.support.design.widget.TabLayout
-                android:id="@+id/tabLayout"
-                android:layout_width="320dp"
-                android:layout_height="48dp"
-                android:background="@color/white"
-                app:tabTextColor="@color/black"
-                app:tabSelectedTextColor="@color/tabSelected"
-                app:tabIndicatorHeight="0dp"
-                style="@style/tabLayoutTextStyle"/>
-            <ImageButton
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@color/white"/>
+                android:layout_weight="9">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:tabTextColor="@color/black"
+                    app:tabSelectedTextColor="@color/tabSelected"
+                    app:tabIndicatorHeight="0dp"
+                    style="@style/tabLayoutTextStyle"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ToggleButton
+                    android:id="@+id/toggleBtn_range"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/range_selector"
+                    android:scaleType="centerInside"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
         </LinearLayout>
     </android.support.design.widget.AppBarLayout>
 
