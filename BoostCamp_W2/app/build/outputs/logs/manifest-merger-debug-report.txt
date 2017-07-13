@@ -1,0 +1,99 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:3:5-40
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/jyoung/.android/build-cache/1a83bae2c1e90c8ac1f345104e146a97f799fa00/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/jyoung/.android/build-cache/88fd5bce41e60d4128b21c2ddc914bfa06e3758e/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/jyoung/.android/build-cache/6711a48d2b3de174c8e863196a3093cb9bb2cb7b/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/jyoung/.android/build-cache/2135ec940523a51ef6b6119a09a1934e20cad467/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/jyoung/.android/build-cache/e2c80a256e0fa3c17f79a4395c7afc7225f916b8/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/jyoung/.android/build-cache/0943f8b83688cbee7bbb71e5c70a39a355e656e7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/jyoung/.android/build-cache/95dc33b908a1d1a6bc307e9a0f644d61cf62f68c/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/jyoung/.android/build-cache/78700e890bd6ec19925938773647bc95a80747a8/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/jyoung/.android/build-cache/db0d2f5a67eaa1b14fb0661ac995daa8cff7fa62/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/jyoung/.android/build-cache/7ba6363fd7b29c6a0cd60207ed82b7ff797afef0/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:11:9-40
+activity#boost.jyoung.boostcamp_w2.MainActivity
+ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:15:13-56
+	android:name
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:13:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/jyoung/.android/build-cache/1a83bae2c1e90c8ac1f345104e146a97f799fa00/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/jyoung/.android/build-cache/88fd5bce41e60d4128b21c2ddc914bfa06e3758e/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/jyoung/.android/build-cache/532c224128e1d00fdf8c7f3ff98bf1511a71aab8/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/jyoung/.android/build-cache/6711a48d2b3de174c8e863196a3093cb9bb2cb7b/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/jyoung/.android/build-cache/2135ec940523a51ef6b6119a09a1934e20cad467/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/jyoung/.android/build-cache/e2c80a256e0fa3c17f79a4395c7afc7225f916b8/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/jyoung/.android/build-cache/0943f8b83688cbee7bbb71e5c70a39a355e656e7/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/jyoung/.android/build-cache/95dc33b908a1d1a6bc307e9a0f644d61cf62f68c/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/jyoung/.android/build-cache/78700e890bd6ec19925938773647bc95a80747a8/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/jyoung/.android/build-cache/db0d2f5a67eaa1b14fb0661ac995daa8cff7fa62/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/jyoung/.android/build-cache/7ba6363fd7b29c6a0cd60207ed82b7ff797afef0/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] /Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/jyoung/.android/build-cache/1a83bae2c1e90c8ac1f345104e146a97f799fa00/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/jyoung/.android/build-cache/88fd5bce41e60d4128b21c2ddc914bfa06e3758e/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/jyoung/.android/build-cache/532c224128e1d00fdf8c7f3ff98bf1511a71aab8/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/jyoung/.android/build-cache/6711a48d2b3de174c8e863196a3093cb9bb2cb7b/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/jyoung/.android/build-cache/2135ec940523a51ef6b6119a09a1934e20cad467/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/jyoung/.android/build-cache/e2c80a256e0fa3c17f79a4395c7afc7225f916b8/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/jyoung/.android/build-cache/0943f8b83688cbee7bbb71e5c70a39a355e656e7/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/jyoung/.android/build-cache/95dc33b908a1d1a6bc307e9a0f644d61cf62f68c/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/jyoung/.android/build-cache/78700e890bd6ec19925938773647bc95a80747a8/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/jyoung/.android/build-cache/db0d2f5a67eaa1b14fb0661ac995daa8cff7fa62/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/AndroidManifest.xml:26:9-47

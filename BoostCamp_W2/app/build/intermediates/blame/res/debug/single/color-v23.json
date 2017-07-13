@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/jyoung/.android/build-cache/c9f527def1b489e6565448569f5e956d7b7110f2/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    }
+]

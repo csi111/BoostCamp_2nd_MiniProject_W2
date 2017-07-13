@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher_round.png",
+        "source": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

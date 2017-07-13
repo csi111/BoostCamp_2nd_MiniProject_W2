@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/jyoung/AndroidStudioProjects/BoostCamp_2nd_MiniProject_W2/BoostCamp_W2/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/jyoung/.android/build-cache/f910a826e1d4cd5356c46ddb5355a00cad407c74/output/res/layout-v21/notification_action.xml"
+    }
+]
