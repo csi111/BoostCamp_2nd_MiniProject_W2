@@ -5,17 +5,26 @@ package android.com.miniproject2.model;
  */
 
 public class ItemData {
+    int id;
     String name;
     int img;
     String description;
     int check;
 
-
-    public ItemData(String name, int img, String description, int check) {
+    public ItemData(int id, String name, int img, String description, int check) {
+        this.id = id;
         this.name = name;
         this.img = img;
         this.description = description;
         this.check = check;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

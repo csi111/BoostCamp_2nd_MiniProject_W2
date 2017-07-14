@@ -148,10 +148,10 @@ public class DBAdapter {
         return mCursor;
     }
     // ---updates a contact---
-    public boolean updateChcek(String name,  int flag ) {
+    public boolean updateChcek(int name,  int flag ) {
         ContentValues args = new ContentValues();
         args.put(KEY_CHECK, flag);
-        return db.update(DATABASE_TABLE, args, KEY_NAME + "=" + name, null) > 0;
+        return db.update(DATABASE_TABLE, args, KEY_ROWID + "=" + name, null) > 0;
     }
 
 

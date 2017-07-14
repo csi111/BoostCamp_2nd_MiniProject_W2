@@ -78,7 +78,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_linear_block"/>
+                android:src="@drawable/ic_staggered_block"/>
 
         </LinearLayout>
 

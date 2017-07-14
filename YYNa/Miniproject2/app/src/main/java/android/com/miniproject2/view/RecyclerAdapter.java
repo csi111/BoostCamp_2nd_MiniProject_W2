@@ -14,10 +14,11 @@ import java.util.ArrayList;
  * Created by nasos on 2017-07-13.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
     ArrayList<ItemData> itemDatas;
     Context context;
+    View view;
 
     public RecyclerAdapter(ArrayList<ItemData> itemDatas, Context context) {
         this.itemDatas = itemDatas;
@@ -27,8 +28,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.item, null);
+        view = LayoutInflater.from(context).inflate(R.layout.item, null);
+
+
+
         return new BaseViewHolder(view);
+
+
 
     }
 
@@ -41,12 +47,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         VHItem.photo.setImageResource(itemDatas.get(position).getImg());
         VHItem.description.setText(itemDatas.get(position).getDescription());
         VHItem.check.setImageResource(itemDatas.get(position).getCheck());
+
+
+
+
     }
+
+
 
     @Override
     public int getItemCount() {
         return itemDatas != null ? itemDatas.size() : 0;
     }
+
 
 
 }
