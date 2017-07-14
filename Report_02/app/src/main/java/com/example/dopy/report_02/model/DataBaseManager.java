@@ -6,6 +6,7 @@ import android.util.Log;
 import com.example.dopy.report_02.R;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.QueryBuilder;
+import com.j256.ormlite.stmt.UpdateBuilder;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -58,6 +59,15 @@ public class DataBaseManager {
             getHelper().getStandardInfosDao().createOrUpdate(item);
         } catch (SQLException e) {
             Log.e("DBHelper",e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    public void updateData(Item item){
+        try {
+            getHelper().getStandardInfosDao().update(item);
+/*            UpdateBuilder<Item,Integer>updateBuilder=getHelper().getStandardInfosDao().updateBuilder();
+            updateBuilder.updateColumnValue("name",item.getName());*/
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

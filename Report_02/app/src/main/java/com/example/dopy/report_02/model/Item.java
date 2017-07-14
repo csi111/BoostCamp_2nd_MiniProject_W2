@@ -57,4 +57,8 @@ public class Item {
     public Boolean getClicked() {
         return clicked;
     }
+
+    public void clicked(){
+        clicked=!clicked;
+    }
 }

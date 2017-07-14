@@ -2,6 +2,7 @@ package com.example.dopy.report_02;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.baseVi
             imgClick=(ImageView)itemView.findViewById(R.id.imgClick);
         }
 
-        public void bindView(Item item){
+        public void bindView(final Item item){
             imgView.setImageResource(item.getImagePath());
             name.setText(item.getName());
             contents.setText(item.getContents());
@@ -67,6 +68,16 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.baseVi
             }else{
                 imgClick.setImageResource(R.drawable.ic_click);
             }
+
+            imgClick.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d("BaseViewHolder","Clocked imgListener");
+                    item.clicked();
+                    DataBaseManager.getInstance().updateData(item);
+                    bindView(item);
+                }
+            });
         }
 
 
