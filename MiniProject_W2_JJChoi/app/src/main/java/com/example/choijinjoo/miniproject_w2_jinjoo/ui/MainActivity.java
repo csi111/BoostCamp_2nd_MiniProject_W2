@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     RestaurantAdapter.CheckedListener checkedListener = new RestaurantAdapter.CheckedListener() {
         @Override
-        public void Checked(int position, Restaurant restaurant) {
+        public void Checked(int position) {
+            Restaurant restaurant = adapter.getItem(position);
             restaurant.setChecked(!restaurant.isChecked());
             if (restaurantRepository.updateRestaurant(restaurant) != -1)
                 adapter.notifyItemChanged(position);

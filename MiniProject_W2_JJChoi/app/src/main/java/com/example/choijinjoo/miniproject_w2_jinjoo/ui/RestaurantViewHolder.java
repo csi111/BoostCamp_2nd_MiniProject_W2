@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.choijinjoo.miniproject_w2_jinjoo.R;
 import com.example.choijinjoo.miniproject_w2_jinjoo.model.Restaurant;
+import com.example.choijinjoo.miniproject_w2_jinjoo.tools.Utils;
 
 /**
  * Created by choijinjoo on 2017. 7. 14..
@@ -33,21 +34,21 @@ public class RestaurantViewHolder extends RecyclerView.ViewHolder {
         txtvDescription = (TextView) itemView.findViewById(R.id.txtvDescription);
         imgvRestaurant = (ImageView) itemView.findViewById(R.id.imgvRestaurant);
         imgvCheck = (ImageView) itemView.findViewById(R.id.imgvCheck);
+        imgvCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.Checked(getAdapterPosition());
+            }
+        });
 
     }
 
     public void bindView(final Restaurant restaurant) {
         txtvName.setText(restaurant.getName());
         txtvDescription.setText(restaurant.getDescription());
-        imgvRestaurant.setImageResource(context.getResources().getIdentifier(restaurant.getImage(), "drawable", context.getPackageName()));
-        imgvCheck.setSelected(restaurant.isChecked());
 
-        imgvCheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.Checked(getAdapterPosition(), restaurant);
-            }
-        });
+        imgvRestaurant.setImageBitmap(Utils.getResizedBitmap(context,restaurant.getImage()));
+        imgvCheck.setSelected(restaurant.isChecked());
 
     }
 

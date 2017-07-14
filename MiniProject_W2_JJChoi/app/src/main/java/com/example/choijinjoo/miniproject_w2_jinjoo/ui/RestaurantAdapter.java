@@ -20,7 +20,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantViewHolder
     CheckedListener listener;
 
     interface CheckedListener {
-        void Checked(int position, Restaurant restaurant);
+        void Checked(int position);
     }
 
     public RestaurantAdapter(Context context, List<Restaurant> items, CheckedListener listener) {
@@ -47,5 +47,8 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantViewHolder
     public void changeItems(List<Restaurant> items){
         this.items = items;
         notifyDataSetChanged();
+    }
+    public Restaurant getItem(int position){
+        return items.get(position);
     }
 }
