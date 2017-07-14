@@ -1,5 +1,6 @@
 package com.example.choijinjoo.miniproject_w2_jinjoo.ui;
 
+import android.content.SharedPreferences;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.choijinjoo.miniproject_w2_jinjoo.R;
 import com.example.choijinjoo.miniproject_w2_jinjoo.db.RestaurantRepository;
+import com.example.choijinjoo.miniproject_w2_jinjoo.db.SharedPreferenceHelper;
 import com.example.choijinjoo.miniproject_w2_jinjoo.model.Restaurant;
 
 import java.util.ArrayList;
@@ -93,15 +95,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         filters.add(txtvStar);
         filters.add(txtvCreatedAt);
 
+
         // init RecyclerView
-        recvRestaurants.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        rearrangeLayout();
         adapter = new RestaurantAdapter(this, restaurantRepository.getRestaurants(), checkedListener);
         recvRestaurants.setAdapter(adapter);
+
     }
 
 
-    private void rearrangeLayout(boolean rearrange) {
-        if (rearrange)
+    private void rearrangeLayout() {
+        boolean staggered = SharedPreferenceHelper.getBooleanValue(this, "rearrange_stggered", false);
+        imgvRearrange.setSelected(staggered);
+        if (staggered)
             recvRestaurants.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         else
             recvRestaurants.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -131,8 +137,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txtvCreatedAt.setSelected(true);
                 break;
             case R.id.imgvRearrange:
-                imgvRearrange.setSelected(!imgvRearrange.isSelected());
-                rearrangeLayout(imgvRearrange.isSelected());
+                SharedPreferenceHelper.rearrange(this);
+                rearrangeLayout();
                 break;
         }
     }
