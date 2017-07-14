@@ -1,7 +1,9 @@
 package android.com.miniproject2;
 
+import android.com.miniproject2.model.DBAdapter;
 import android.com.miniproject2.model.ItemData;
 import android.com.miniproject2.view.RecyclerAdapter;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -72,25 +74,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        makedata();
-//
-//        DBAdapter db = new DBAdapter(this);
-////---add a contact---
-//        db.open();
-//        long id = db.insertData("Michael Jackson", 12333,"mike@gmail.com", 1,332);
-//        id = db.insertData("hohoho", 1,"aaaaa@gmail.com", 3331,999);
-//        db.close();
-//// ---get all contacts---
-//        db.open();
-//        Cursor c = db.getAllContacts();
-//        if (c.moveToFirst()) {
-//            do {
-//                DisplayContact(c);
-//            } while (c.moveToNext());
-//        }
-//        db.close();
-//
-//        mainText.setText(tmp);
+       makedata();
 
 
 
@@ -116,26 +100,37 @@ public class MainActivity extends AppCompatActivity
 
 
 
+        String tmpName="";
+        int tmpPhoto;
+        int tmpDesc;
+        int tmpCheck;
+        DBAdapter db = new DBAdapter(this);
+// ---get all contacts---
+        db.open();
 
-
-        // add data
         itemDatas = new ArrayList<ItemData>();
-        itemDatas.add(new ItemData("맛집1",R.drawable.res_photo1,"설명?",R.drawable.check));
-        itemDatas.add(new ItemData("맛집2",R.drawable.res_photo2,"설명?",R.drawable.checked));
-        itemDatas.add(new ItemData("맛집3",R.drawable.res_photo3,"설명?",R.drawable.check));
-        itemDatas.add(new ItemData("맛집4",R.drawable.res_photo4,"설명?",R.drawable.checked));
+        Cursor c = db.getAllContacts();
+        if (c.moveToFirst()) {
+            do {
+                tmpName= c.getString(1);
+                tmpPhoto= c.getInt(2);
+                tmpDesc= c.getInt(3);
+                tmpCheck= c.getInt(6);
 
+                if(tmpCheck == 1) tmpCheck = R.drawable.check;
+                else tmpCheck= R.drawable.checked;
+
+
+                itemDatas.add(new ItemData(tmpName,tmpPhoto,getString(tmpDesc),tmpCheck));
+
+            } while (c.moveToNext());
+        }
+        db.close();
 
         recyclerAdapter = new RecyclerAdapter(itemDatas, this);
         recyclerView.setAdapter(recyclerAdapter);
 
     }
-
-//
-//    public void DisplayContact(Cursor c) {
-//        tmp += "name   " + c.getString(1) + "   img  "+c.getInt(2)  + "  dest  "+c.getString(3)  + "   dist   "+c.getInt(4) +  "   pop   "+c.getInt(5) +'\n' ;
-//
-//    }
 
 
 
