@@ -6,13 +6,17 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import com.example.suno.boostcamp2.data.FamousPlace;
 import com.example.suno.boostcamp2.R;
 import com.example.suno.boostcamp2.RecyclerAdapter;
+import com.example.suno.boostcamp2.util.DBHelper;
 
 import java.util.ArrayList;
 
@@ -22,11 +26,16 @@ import java.util.ArrayList;
 
 public class FamousPlaceFragment extends Fragment {
     private RecyclerView recyclerView;
+    private CheckBox checkBox;
     private ArrayList<FamousPlace> itemList;
+    private DBHelper dbHelper;
+    private int orderedBy;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        orderedBy = getArguments().getInt("orderedBy");
+
         return inflater.inflate(R.layout.fragment_famous_place, container, false);
     }
 
@@ -35,21 +44,23 @@ public class FamousPlaceFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Context context = view.getContext();
-        itemList = new ArrayList<>();
+        dbHelper = new DBHelper(getActivity());
+        itemList = dbHelper.getData(orderedBy);
 
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerView);
-        //recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(new RecyclerAdapter(itemList, getActivity()));
-
     }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
+
 }
