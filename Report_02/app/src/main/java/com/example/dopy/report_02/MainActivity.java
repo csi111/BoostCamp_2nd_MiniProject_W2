@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.dopy.report_02.model.DBHelper;
+import com.example.dopy.report_02.model.DataBaseManager;
 import com.example.dopy.report_02.model.Item;
 
 import java.util.ArrayList;
@@ -39,11 +40,11 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 //데이터 베이스 생성
-        DataBasehelper=new DBHelper(getApplicationContext());
+        DataBaseManager.init(this);
         test();
     }
     public void test(){
-        ArrayList<Item> arrayList=DataBasehelper.select();
+        ArrayList<Item> arrayList=DataBaseManager.getInstance().select();
         for(int i=0;i<arrayList.size();i++){
             Log.d("TEST",arrayList.get(i).getName());
         }
