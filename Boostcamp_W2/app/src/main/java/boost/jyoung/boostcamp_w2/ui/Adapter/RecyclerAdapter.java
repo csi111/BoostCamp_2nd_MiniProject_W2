@@ -31,7 +31,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ((MyViewHolder)holder).bindView(restaurantLists, this, context);
+        ((MyViewHolder) holder).bindView(restaurantLists, this, context);
     }
 
     @Override

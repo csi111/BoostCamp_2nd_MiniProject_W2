@@ -14,7 +14,9 @@ public class RestaurantList {
     public int postdate;
     public int check_state;
 
-    public RestaurantList(){}
+    public RestaurantList() {
+    }
+
     public RestaurantList(int itemImg, String itemTitle, String itemContent, int distance, int popular, int postdate, int check_state) {
         this.itemImg = itemImg;
         this.itemTitle = itemTitle;

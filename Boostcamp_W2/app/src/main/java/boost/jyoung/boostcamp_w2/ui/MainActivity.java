@@ -1,5 +1,6 @@
 package boost.jyoung.boostcamp_w2.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private PageAdapter pageAdapter;
     private ToggleButton managercontrol;
     static boolean flag = false;
+    public static Context mcontext;
     ArrayList<RestaurantList> restaurantLists;
 
 
@@ -33,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mcontext = this;
         setToolbar();
         initView();
         createDB();
     }
 
-    public void setToolbar(){
+    public void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,25 +52,25 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
     }
 
-    public void initView(){
+    public void initView() {
 
-        managercontrol = (ToggleButton)findViewById(R.id.managercontrol);
+        managercontrol = (ToggleButton) findViewById(R.id.managercontrol);
         managercontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(managercontrol.isChecked()){
+                if (managercontrol.isChecked()) {
                     flag = true;
-                    pageAdapter.notifyDataSetChanged();
-                }else{
+                    pagerRefresh();
+                } else {
                     flag = false;
-                    pageAdapter.notifyDataSetChanged();
+                    pagerRefresh();
                 }
             }
 
         });
 
-        viewPager = (ViewPager)findViewById(R.id.viewpager);
-        tabLayout = (TabLayout)findViewById(tablayout);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        tabLayout = (TabLayout) findViewById(tablayout);
 
         setTab();
 
@@ -93,17 +96,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void setTab(){
+
+    public void setTab() {
         String[] tabName = getResources().getStringArray(R.array.tab_name);
-        for(int i=0; i<3; i++){
+        for (int i = 0; i < 3; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(tabName[i]));
         }
     }
 
 
-    public void createDB(){
-        final DBHelper dbHelper = new DBHelper(getApplicationContext(), "RestaurantList.db", null, 1);
-        int length =getResources().getStringArray(R.array.list_title).length;
+    public void createDB() {
+        DBHelper dbHelper = new DBHelper(getApplicationContext(), "RestaurantList.db", null, 1);
+        int length = getResources().getStringArray(R.array.list_title).length;
         String[] img = getResources().getStringArray(R.array.list_img2);
         String[] title = getResources().getStringArray(R.array.list_title);
         String[] content = getResources().getStringArray(R.array.list_content);
@@ -114,9 +118,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         restaurantLists = new ArrayList<>();
-        for (int i =0; i<length; i++){
-            resId[i] = getApplicationContext().getResources().getIdentifier(img[i],"drawable",getApplicationContext().getPackageName());
+        for (int i = 0; i < length; i++) {
+            resId[i] = getApplicationContext().getResources().getIdentifier(img[i], "drawable", getApplicationContext().getPackageName());
             dbHelper.insert(resId[i], title[i], content[i], distance[i], popular[i], postdate[i], RestaurantFragment.UNCHECKED);
         }
+    }
+
+    public void pagerRefresh() {
+        pageAdapter.notifyDataSetChanged();
     }
 }

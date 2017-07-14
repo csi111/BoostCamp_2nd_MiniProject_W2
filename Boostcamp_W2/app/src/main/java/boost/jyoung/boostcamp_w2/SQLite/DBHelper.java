@@ -15,11 +15,14 @@ import boost.jyoung.boostcamp_w2.Model.RestaurantList;
  */
 
 public class DBHelper extends SQLiteOpenHelper {
-
+    private static final int VERSION = 1;
+    private static final String DB_NAME = "RestaurantList.db";
+    SQLiteDatabase mDB = null;
 
 
     public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
+        mDB = this.getReadableDatabase();
     }
 
     @Override

@@ -46,7 +46,7 @@ public class RestaurantFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         restaurantLists = new ArrayList<>();
 
-        final DBHelper dbHelper = new DBHelper(getContext(), "RestaurantList.db", null, 1);
+        DBHelper dbHelper = new DBHelper(getContext(), "RestaurantList.db", null, 1);
 
         sort = getArguments().getInt("sort");
 
@@ -57,7 +57,7 @@ public class RestaurantFragment extends Fragment {
         recyclerView.setAdapter(recyclerAdapter);
     }
 
-    ////////////////////////// SQLite 미사용시 //////////////////////////
+    ////////////////////////// SQLite not used //////////////////////////
     public ArrayList<RestaurantList> makeList() {
         int length = getResources().getStringArray(R.array.list_title).length;
         TypedArray img = getResources().obtainTypedArray(R.array.list_img);
@@ -89,21 +89,21 @@ public class RestaurantFragment extends Fragment {
             Collections.sort(list, new Comparator<RestaurantList>() {
                 @Override
                 public int compare(RestaurantList list, RestaurantList t1) {
-                    return list.distance - t1.distance;
+                    return list.getDistance() - t1.getDistance();
                 }
             });
         } else if (sort == 1) {
             Collections.sort(list, new Comparator<RestaurantList>() {
                 @Override
                 public int compare(RestaurantList list, RestaurantList t1) {
-                    return t1.popular - list.popular;
+                    return t1.getPopular() - list.getPopular();
                 }
             });
         } else if (sort == 2) {
             Collections.sort(list, new Comparator<RestaurantList>() {
                 @Override
                 public int compare(RestaurantList list, RestaurantList t1) {
-                    return t1.postdate - list.postdate;
+                    return t1.getPostdate() - list.getPostdate();
                 }
             });
         }

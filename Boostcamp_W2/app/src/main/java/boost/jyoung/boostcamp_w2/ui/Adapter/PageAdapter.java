@@ -23,18 +23,18 @@ public class PageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         RestaurantFragment fragment = new RestaurantFragment();
         Bundle sort = new Bundle();
-        switch (position){
+        switch (position) {
             case 0:
-                sort.putInt("sort",0);
+                sort.putInt("sort", 0);
                 break;
             case 1:
-                sort.putInt("sort",1);
+                sort.putInt("sort", 1);
                 break;
             case 2:
-                sort.putInt("sort",2);
+                sort.putInt("sort", 2);
                 break;
             default:
-                sort.putInt("sort",0);
+                sort.putInt("sort", 0);
                 break;
         }
         fragment.setArguments(sort);
