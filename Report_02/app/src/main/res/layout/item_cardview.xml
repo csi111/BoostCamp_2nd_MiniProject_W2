@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="3dp"
-        card:cardCornerRadius="3dp"
-        card:contentPadding="3dp">
+        card:cardCornerRadius="10dp"
+        card:contentPadding="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,6 +22,7 @@
                 android:id="@+id/imgMain"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
+                android:cropToPadding="false"
                 android:scaleType="centerCrop"
                 card:srcCompat="@drawable/algia" />
 
@@ -30,24 +31,12 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/txtContents"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="TextView"
-                    card:layout_constraintTop_toBottomOf="@+id/txtName"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="2dp"
-                    card:layout_constraintLeft_toLeftOf="parent"
-                    android:layout_marginStart="8dp" />
-
-                <TextView
                     android:id="@+id/txtName"
                     android:layout_width="323dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="16dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:maxLines="1"
                     android:text="TextView"
                     android:textColor="@android:color/background_dark"
@@ -56,6 +45,21 @@
                     card:layout_constraintLeft_toLeftOf="parent"
                     card:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/txtContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingRight="8dp"
+                    android:text="TextView"
+                    card:layout_constraintHorizontal_bias="0.0"
+                    card:layout_constraintLeft_toLeftOf="parent"
+                    card:layout_constraintRight_toRightOf="parent"
+                    card:layout_constraintTop_toBottomOf="@+id/txtName" />
+
                 <ImageView
                     android:id="@+id/imgClick"
                     android:layout_width="31dp"
@@ -63,13 +67,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
                     android:layout_weight="1"
-                    card:srcCompat="@drawable/ic_click"
-                    card:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginRight="3dp"
                     card:layout_constraintRight_toRightOf="parent"
-                    android:layout_marginEnd="8dp" />
+                    card:layout_constraintTop_toTopOf="parent"
+                    card:srcCompat="@drawable/ic_click" />
 
             </android.support.constraint.ConstraintLayout>
 
