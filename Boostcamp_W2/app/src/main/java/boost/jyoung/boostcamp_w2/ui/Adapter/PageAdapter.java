@@ -1,9 +1,11 @@
-package boost.jyoung.boostcamp_w2;
+package boost.jyoung.boostcamp_w2.ui.Adapter;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import boost.jyoung.boostcamp_w2.ui.RestaurantFragment;
 
 /**
  * Created by jyoung on 2017. 7. 13..
@@ -11,7 +13,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class PageAdapter extends FragmentPagerAdapter {
     int tabcount;
-    boolean flag;
 
     public PageAdapter(FragmentManager fm, int tabcount) {
         super(fm);
@@ -39,6 +40,11 @@ public class PageAdapter extends FragmentPagerAdapter {
         fragment.setArguments(sort);
 
         return fragment;
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
     }
 
     @Override

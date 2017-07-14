@@ -28,14 +28,24 @@
     </string-array>
 
     <integer-array name="list_img">
-        <item>@drawable/restaurant1</item>
         <item>@drawable/restaurant2</item>
+        <item>@drawable/restaurant1</item>
         <item>@drawable/restaurant3</item>
         <item>@drawable/restaurant4</item>
         <item>@drawable/restaurant5</item>
         <item>@drawable/restaurant6</item>
         <item>@drawable/restaurant7</item>
     </integer-array>
+
+    <string-array name="list_img2">
+        <item>restaurant1</item>
+        <item>restaurant2</item>
+        <item>restaurant3</item>
+        <item>restaurant4</item>
+        <item>restaurant5</item>
+        <item>restaurant6</item>
+        <item>restaurant7</item>
+    </string-array>
 
     <integer-array name="list_distance">
         <item>11</item>

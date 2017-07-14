@@ -1,28 +1,33 @@
-package boost.jyoung.boostcamp_w2;
+package boost.jyoung.boostcamp_w2.ui;
 
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ToggleButton;
 
+import java.util.ArrayList;
+
+import boost.jyoung.boostcamp_w2.Model.RestaurantList;
+import boost.jyoung.boostcamp_w2.R;
+import boost.jyoung.boostcamp_w2.SQLite.DBHelper;
+import boost.jyoung.boostcamp_w2.ui.Adapter.PageAdapter;
+
 import static boost.jyoung.boostcamp_w2.R.id.tablayout;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private PageAdapter pageAdapter;
     private ToggleButton managercontrol;
+    static boolean flag = false;
+    ArrayList<RestaurantList> restaurantLists;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         setToolbar();
         initView();
-        setTab();
+        createDB();
     }
 
     public void setToolbar(){
@@ -43,13 +48,20 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
     }
+
     public void initView(){
 
         managercontrol = (ToggleButton)findViewById(R.id.managercontrol);
         managercontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(managercontrol.isChecked()){
+                    flag = true;
+                    pageAdapter.notifyDataSetChanged();
+                }else{
+                    flag = false;
+                    pageAdapter.notifyDataSetChanged();
+                }
             }
 
         });
@@ -57,7 +69,9 @@ public class MainActivity extends AppCompatActivity
         viewPager = (ViewPager)findViewById(R.id.viewpager);
         tabLayout = (TabLayout)findViewById(tablayout);
 
-        pageAdapter = new PageAdapter(getSupportFragmentManager(), 3);
+        setTab();
+
+        pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
         viewPager.setCurrentItem(0);
 
@@ -78,9 +92,6 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
     }
     public void setTab(){
         String[] tabName = getResources().getStringArray(R.array.tab_name);
@@ -90,59 +101,22 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    public void createDB(){
+        final DBHelper dbHelper = new DBHelper(getApplicationContext(), "RestaurantList.db", null, 1);
+        int length =getResources().getStringArray(R.array.list_title).length;
+        String[] img = getResources().getStringArray(R.array.list_img2);
+        String[] title = getResources().getStringArray(R.array.list_title);
+        String[] content = getResources().getStringArray(R.array.list_content);
+        int[] distance = getResources().getIntArray(R.array.list_distance);
+        int[] popular = getResources().getIntArray(R.array.list_popular);
+        int[] postdate = getResources().getIntArray(R.array.list_postdate);
+        int[] resId = new int[length];
+
+
+        restaurantLists = new ArrayList<>();
+        for (int i =0; i<length; i++){
+            resId[i] = getApplicationContext().getResources().getIdentifier(img[i],"drawable",getApplicationContext().getPackageName());
+            dbHelper.insert(resId[i], title[i], content[i], distance[i], popular[i], postdate[i], RestaurantFragment.UNCHECKED);
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
     }
 }

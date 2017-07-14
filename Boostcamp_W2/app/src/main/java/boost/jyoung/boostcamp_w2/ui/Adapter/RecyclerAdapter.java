@@ -1,4 +1,4 @@
-package boost.jyoung.boostcamp_w2;
+package boost.jyoung.boostcamp_w2.ui.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+
+import boost.jyoung.boostcamp_w2.Model.RestaurantList;
+import boost.jyoung.boostcamp_w2.R;
+import boost.jyoung.boostcamp_w2.ui.ViewHolder.MyViewHolder;
 
 /**
  * Created by jyoung on 2017. 7. 13..
@@ -27,7 +31,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ((MyViewHolder)holder).bindView(restaurantLists);
+        ((MyViewHolder)holder).bindView(restaurantLists, this, context);
     }
 
     @Override

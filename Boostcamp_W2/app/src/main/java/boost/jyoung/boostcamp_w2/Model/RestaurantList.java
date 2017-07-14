@@ -1,4 +1,4 @@
-package boost.jyoung.boostcamp_w2;
+package boost.jyoung.boostcamp_w2.Model;
 
 /**
  * Created by jyoung on 2017. 7. 13..
@@ -6,20 +6,23 @@ package boost.jyoung.boostcamp_w2;
 
 public class RestaurantList {
 
-    int itemImg;
-    String itemTitle;
-    String itemContent;
-    int distance;
-    int popular;
-    int postdate;
+    public int itemImg;
+    public String itemTitle;
+    public String itemContent;
+    public int distance;
+    public int popular;
+    public int postdate;
+    public int check_state;
 
-    public RestaurantList(int itemImg, String itemTitle, String itemContent, int distance, int popular, int postdate) {
+    public RestaurantList(){}
+    public RestaurantList(int itemImg, String itemTitle, String itemContent, int distance, int popular, int postdate, int check_state) {
         this.itemImg = itemImg;
         this.itemTitle = itemTitle;
         this.itemContent = itemContent;
         this.distance = distance;
         this.popular = popular;
         this.postdate = postdate;
+        this.check_state = check_state;
     }
 
     public int getItemImg() {
@@ -69,4 +72,13 @@ public class RestaurantList {
     public void setPopular(int popular) {
         this.popular = popular;
     }
+
+    public int getCheck_state() {
+        return check_state;
+    }
+
+    public void setCheck_state(int check_state) {
+        this.check_state = check_state;
+    }
+
 }
