@@ -19,8 +19,6 @@ import java.util.ArrayList;
  */
 
 public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.baseViewHolder> {
-    private static final int TYPE_HEADER=101;
-    private static final int TYPE_ITEM=102;
 
     ArrayList<Item> arrayList;
     Context context;

@@ -166,18 +166,24 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.nav_distance) {
+            btnDistance.callOnClick();
+        } else if (id == R.id.nav_popularity) {
+            btnpopulrity.callOnClick();
+        } else if (id == R.id.nav_recent) {
+            btnrecent.callOnClick();
+        } else if (id == R.id.nav_Linear) {
+            if(!layout_linear) {
+                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                imgCangeLayout.setImageResource(R.drawable.order_linear);
+                layout_linear = !layout_linear;
+            }
+        } else if (id == R.id.nav_stagg) {
+            if(layout_linear){
+                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,1));
+                imgCangeLayout.setImageResource(R.drawable.order_staggered);
+                layout_linear=!layout_linear;
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

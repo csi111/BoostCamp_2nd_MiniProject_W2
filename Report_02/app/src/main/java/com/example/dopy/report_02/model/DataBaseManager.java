@@ -65,8 +65,6 @@ public class DataBaseManager {
     public void updateData(Item item){
         try {
             getHelper().getStandardInfosDao().update(item);
-/*            UpdateBuilder<Item,Integer>updateBuilder=getHelper().getStandardInfosDao().updateBuilder();
-            updateBuilder.updateColumnValue("name",item.getName());*/
         } catch (SQLException e) {
             e.printStackTrace();
         }
