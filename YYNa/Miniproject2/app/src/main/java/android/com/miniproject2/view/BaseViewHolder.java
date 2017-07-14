@@ -10,15 +10,16 @@ import android.widget.TextView;
  * Created by nasos on 2017-07-13.
  */
 public class BaseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-    TextView restName ;
-    TextView description ;
+    TextView restName;
+    TextView description;
     ImageView photo;
     ImageView check;
     int i = 1;
+
     public BaseViewHolder(View itemView) {
         super(itemView);
-        restName = (TextView)itemView.findViewById(R.id.name);
-        description = (TextView)itemView.findViewById(R.id.descriptPlace);
+        restName = (TextView) itemView.findViewById(R.id.name);
+        description = (TextView) itemView.findViewById(R.id.descriptPlace);
         photo = (ImageView) itemView.findViewById(R.id.photo);
         check = (ImageView) itemView.findViewById(R.id.checkImg);
 
@@ -46,15 +47,12 @@ public class BaseViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         switch (view.getId()) {
             case R.id.checkImg:
                 view.setTextDirection(View.TEXT_DIRECTION_FIRST_STRONG);
-                if(i ==1){
-                check.setImageResource(R.drawable.checked);
+                if (i == 1) {
+                    check.setImageResource(R.drawable.checked);
                     i = 0;
-                }
-                else{
-
+                } else {
                     check.setImageResource(R.drawable.check);
-                    i=1;
-
+                    i = 1;
                 }
         }
     }
