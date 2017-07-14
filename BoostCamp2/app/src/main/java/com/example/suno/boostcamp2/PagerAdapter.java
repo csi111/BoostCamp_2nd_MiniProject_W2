@@ -16,36 +16,38 @@ import com.example.suno.boostcamp2.fragment.FamousPlaceFragment;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
     private int tabCount;
+    FamousPlaceFragment fp1, fp2, fp3;
 
     public PagerAdapter(FragmentManager fm, int tabCount) {
         super(fm);
         this.tabCount = tabCount;
+
+        Bundle bundle;
+        fp1 = new FamousPlaceFragment();
+        bundle = new Bundle(1);
+        bundle.putInt("orderedBy", MainActivity.ORDEREDBY_DISTANCE);
+        fp1.setArguments(bundle);
+
+        fp2 = new FamousPlaceFragment();
+        bundle = new Bundle(1);
+        bundle.putInt("orderedBy", MainActivity.ORDEREDBY_POPULARIRY);
+        fp2.setArguments(bundle);
+
+        fp3 = new FamousPlaceFragment();
+        bundle = new Bundle(1);
+        bundle.putInt("orderedBy", MainActivity.ORDEREDBY_LATEST);
+        fp3.setArguments(bundle);
     }
 
     @Override
     public Fragment getItem(int position) {
-        FamousPlaceFragment fp;
-        Bundle bundle;
-
         switch (position){
             case 0:
-                fp = new FamousPlaceFragment();
-                bundle = new Bundle(1);
-                bundle.putInt("orderedBy", MainActivity.ORDEREDBY_DISTANCE);
-                fp.setArguments(bundle);
-                return fp;
+                return fp1;
             case 1:
-                fp = new FamousPlaceFragment();
-                bundle = new Bundle(1);
-                bundle.putInt("orderedBy", MainActivity.ORDEREDBY_POPULARIRY);
-                fp.setArguments(bundle);
-                return fp;
+                return fp2;
             case 2:
-                fp = new FamousPlaceFragment();
-                bundle = new Bundle(1);
-                bundle.putInt("orderedBy", MainActivity.ORDEREDBY_LATEST);
-                fp.setArguments(bundle);
-                return fp;
+                return fp3;
             default:
                 return new BaseFragment();
         }

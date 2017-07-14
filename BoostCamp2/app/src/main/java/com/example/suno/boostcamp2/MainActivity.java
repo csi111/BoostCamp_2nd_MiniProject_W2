@@ -22,6 +22,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.suno.boostcamp2.data.FamousPlace;
+import com.example.suno.boostcamp2.fragment.FamousPlaceFragment;
 import com.example.suno.boostcamp2.util.DBHelper;
 
 
@@ -57,24 +58,8 @@ public class MainActivity extends AppCompatActivity
         tgBtnRange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+                ((FamousPlaceFragment) pagerAdapter.getItem(viewPager.getCurrentItem())).stagger(tgBtnRange.isChecked());
 
-                if(tgBtnRange.isChecked()){
-                    pagerAdapter.notifyDataSetChanged();
-                    StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-                    //recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, 1));
-                    recyclerView.setLayoutManager(layoutManager);
-
-                    //Toast.makeText(MainActivity.this, "StaggeredGrid!!", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    pagerAdapter.notifyDataSetChanged();
-                    LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-                    layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-                    recyclerView.setLayoutManager(layoutManager);
-
-                    //Toast.makeText(MainActivity.this, "Linear!!", Toast.LENGTH_SHORT).show();
-                }
             }
         });
 

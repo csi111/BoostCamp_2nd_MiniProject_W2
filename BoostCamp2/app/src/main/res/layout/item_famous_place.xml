@@ -27,7 +27,7 @@
                 android:id="@+id/textView_place_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="9"
+                android:layout_weight="10"
                 android:text="제목부분입니다"
                 android:textSize="16dp"
                 android:textStyle="bold"
@@ -38,15 +38,14 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="2">
 
                 <CheckBox
                     android:id="@+id/checkBox_flag"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_alignParentLeft="true"
-                    android:button="@drawable/custom_checkbox"
-                    />
+                    android:button="@drawable/custom_checkbox" />
             </RelativeLayout>
         </LinearLayout>
         
