@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MiniProject_W2_Jinjoo</string>
+    <string name="toolbar_title">맛집리스트</string>
+
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <string name="filter_distance">거리순</string>
+    <string name="filter_star">인기순</string>
+    <string name="filter_createdAt">최근순</string>
+
 </resources>
