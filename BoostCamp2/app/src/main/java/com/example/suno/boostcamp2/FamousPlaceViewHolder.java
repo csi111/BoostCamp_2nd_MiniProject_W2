@@ -29,6 +29,7 @@ public class FamousPlaceViewHolder extends RecyclerView.ViewHolder{
         super(itemView);
 
         this.context = context;
+
         imgvPlacePhoto = (ImageView)itemView.findViewById(R.id.imageView_place_photo);
         tvPlaceName = (TextView)itemView.findViewById(R.id.textView_place_name);
         checkBox = (CheckBox)itemView.findViewById(R.id.checkBox_flag);

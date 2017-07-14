@@ -97,7 +97,7 @@ public class DBHelper extends SQLiteOpenHelper {
             selectQuery= "SELECT * FROM " + TABLE_NAME
                     + " ORDER BY " + RECOMMANDATION_CNT + " DESC";
         }
-        else{//ORDEREDBY_LATEST
+        else{ //ORDEREDBY_LATEST
             selectQuery= "SELECT * FROM " + TABLE_NAME
                     + " ORDER BY " + DATE + " DESC";
         }
@@ -119,6 +119,18 @@ public class DBHelper extends SQLiteOpenHelper {
         }
 
         return list;
+    }
+
+    public boolean checkNull(){
+        SQLiteDatabase db = getWritableDatabase();
+        String sql = "SELECT count(*) FROM "+TABLE_NAME;
+        Cursor c = db.rawQuery(sql, null);
+        c.moveToFirst();
+        if(c.getCount() > 0){
+            return false;
+        }
+        else
+            return true;
     }
 
 }

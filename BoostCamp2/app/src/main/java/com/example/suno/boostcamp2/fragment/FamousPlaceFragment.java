@@ -10,7 +10,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 
 import com.example.suno.boostcamp2.data.FamousPlace;
 import com.example.suno.boostcamp2.R;
@@ -25,7 +24,7 @@ import java.util.ArrayList;
 
 public class FamousPlaceFragment extends Fragment {
     private RecyclerView recyclerView;
-    private CheckBox checkBox;
+    private RecyclerAdapter recyclerAdapter;
     private ArrayList<FamousPlace> itemList;
     private DBHelper dbHelper;
     private int orderedBy;
@@ -53,9 +52,9 @@ public class FamousPlaceFragment extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        recyclerView.setAdapter(new RecyclerAdapter(itemList, getActivity()));
+        recyclerAdapter = new RecyclerAdapter(itemList, getActivity());
+        recyclerView.setAdapter(recyclerAdapter);
     }
-
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
