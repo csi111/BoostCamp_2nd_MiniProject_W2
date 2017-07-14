@@ -43,4 +43,9 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantViewHolder
     public int getItemCount() {
         return items.size();
     }
+
+    public void changeItems(List<Restaurant> items){
+        this.items = items;
+        notifyDataSetChanged();
+    }
 }

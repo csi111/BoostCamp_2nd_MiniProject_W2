@@ -98,7 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // init RecyclerView
         rearrangeLayout();
-        adapter = new RestaurantAdapter(this, restaurantRepository.getRestaurants(), checkedListener);
+        txtvDistance.setSelected(true);
+        adapter = new RestaurantAdapter(this, restaurantRepository.getRestaurantsOrderByDistance(), checkedListener);
         recvRestaurants.setAdapter(adapter);
 
     }
@@ -114,32 +115,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void initTextViewState() {
-        for (TextView filter : filters) {
-            if (filter.isSelected())
-                filter.setSelected(false);
-        }
-    }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.txtvDistance:
-                initTextViewState();
-                txtvDistance.setSelected(true);
+                changeRecvItems(txtvDistance, restaurantRepository.getRestaurantsOrderByDistance());
                 break;
             case R.id.txtvStar:
-                initTextViewState();
-                txtvStar.setSelected(true);
+                changeRecvItems(txtvStar, restaurantRepository.getRestaurantsOrderByStar());
                 break;
             case R.id.txtvCreatedAt:
-                initTextViewState();
-                txtvCreatedAt.setSelected(true);
+                changeRecvItems(txtvCreatedAt, restaurantRepository.getRestaurantsOrderByCreatedAt());
                 break;
             case R.id.imgvRearrange:
                 SharedPreferenceHelper.rearrange(this);
                 rearrangeLayout();
                 break;
+        }
+    }
+
+    private void changeRecvItems(View selectedView, List<Restaurant> items) {
+        initTextViewState();
+        selectedView.setSelected(true);
+        adapter.changeItems(items);
+    }
+
+    private void initTextViewState() {
+        for (TextView filter : filters) {
+            if (filter.isSelected())
+                filter.setSelected(false);
         }
     }
 
