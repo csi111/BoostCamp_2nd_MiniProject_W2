@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
 
         init();
         tabLayoutInit();
+        addData();
 
         tgBtnRange.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,8 +56,6 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-
-        addData();
 
     }
 

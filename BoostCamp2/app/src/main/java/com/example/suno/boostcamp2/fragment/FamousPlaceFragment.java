@@ -42,8 +42,6 @@ public class FamousPlaceFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Context context = view.getContext();
-        dbHelper = new DBHelper(getActivity());
-        itemList = dbHelper.getData(orderedBy);
 
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -61,15 +59,29 @@ public class FamousPlaceFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        dbHelper = new DBHelper(getActivity());
+        itemList = dbHelper.getData(orderedBy);
+    }
+
     public void stagger(boolean staggered){
         if(staggered){
             StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-            recyclerView.setLayoutManager(layoutManager);
+
+            if(recyclerView != null){
+                recyclerView.setLayoutManager(layoutManager);
+            }
         }
         else{
             LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
             layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-            recyclerView.setLayoutManager(layoutManager);
+            if(recyclerView != null){
+                recyclerView.setLayoutManager(layoutManager);
+            }
+
         }
     }
 }

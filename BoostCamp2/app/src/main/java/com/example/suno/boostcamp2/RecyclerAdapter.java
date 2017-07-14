@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.suno.boostcamp2.data.FamousPlace;
-import com.example.suno.boostcamp2.fragment.FamousPlaceFragment;
 
 import java.util.ArrayList;
 
@@ -19,10 +18,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private ArrayList<FamousPlace> itemList;
     private Context context;
-
-    public interface CheckedListener{
-        void checked(int position);
-    }
 
     public RecyclerAdapter(ArrayList<FamousPlace> itemList, Context context) {
         this.itemList = itemList;
@@ -60,12 +55,4 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         return itemList != null ? itemList.size() : 0;
     }
 
-//    public void changeItems(ArrayList<FamousPlace> itemList){
-//        this.itemList = itemList;
-//        notifyDataSetChanged();
-//    }
-//
-//    public FamousPlace getItem(int position){
-//        return itemList.get(position);
-//    }
 }

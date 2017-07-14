@@ -1,12 +1,9 @@
 package com.example.suno.boostcamp2;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-
-import com.example.suno.boostcamp2.data.FamousPlace;
 import com.example.suno.boostcamp2.fragment.BaseFragment;
 import com.example.suno.boostcamp2.fragment.FamousPlaceFragment;
 
