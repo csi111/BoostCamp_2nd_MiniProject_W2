@@ -9,7 +9,7 @@ import android.widget.TextView;
 /**
  * Created by nasos on 2017-07-13.
  */
-public class BaseViewHolder extends RecyclerView.ViewHolder {
+public class BaseViewHolder extends RecyclerView.ViewHolder  {
     TextView restName ;
     TextView description ;
     ImageView photo;
@@ -22,7 +22,20 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
         photo = (ImageView) itemView.findViewById(R.id.photo);
         check = (ImageView) itemView.findViewById(R.id.checkImg);
 
+//        check.setOnClickListener(this);
     }
+//
+//
+//    public void onClick(View v) {
+//        switch (v.getId()) {
+//            case R.id.checkImg:
+//                check.setImageResource(R.drawable.checked);
+//                break;
+//
+//
+//        }
+//    }
+
 
 
 

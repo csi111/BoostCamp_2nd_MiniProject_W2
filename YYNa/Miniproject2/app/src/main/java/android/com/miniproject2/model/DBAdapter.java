@@ -121,6 +121,22 @@ public class DBAdapter {
         return db.query(DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
                 KEY_IMAGE, KEY_DESCRIPTION,  KEY_POPULARITY, KEY_DIST , KEY_CHECK}, null, null, null, null, null);
     }
+
+
+    public Cursor getAllContactsByRecent() {
+        return db.query(DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
+                KEY_IMAGE, KEY_DESCRIPTION,  KEY_POPULARITY, KEY_DIST , KEY_CHECK}, null, null, null, null, KEY_ROWID+" DESC");
+    }
+
+    public Cursor getAllContactsByPopularity() {
+        return db.query(DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
+                KEY_IMAGE, KEY_DESCRIPTION,  KEY_POPULARITY, KEY_DIST , KEY_CHECK}, null, null, null, null, KEY_POPULARITY+" DESC");
+    }
+
+    public Cursor getAllContactsByDistOrder() {
+        return db.query(DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
+                KEY_IMAGE, KEY_DESCRIPTION,  KEY_POPULARITY, KEY_DIST , KEY_CHECK}, null, null, null, null, KEY_DIST+" ASC");
+    }
     // ---retrieves a particular contact---
     public Cursor getContact(long rowId) throws SQLException {
         Cursor mCursor = db.query(true, DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
@@ -132,15 +148,12 @@ public class DBAdapter {
         return mCursor;
     }
     // ---updates a contact---
-    public boolean updateContact(long rowId, String name, int img, int description, int pop, int dist, int flag ) {
+    public boolean updateChcek(String name,  int flag ) {
         ContentValues args = new ContentValues();
-        args.put(KEY_NAME, name);
-        args.put(KEY_IMAGE, img);
-        args.put(KEY_DESCRIPTION, description);
-        args.put(KEY_POPULARITY, pop);
-        args.put(KEY_DIST, dist);
         args.put(KEY_CHECK, flag);
-        return db.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
+        return db.update(DATABASE_TABLE, args, KEY_NAME + "=" + name, null) > 0;
     }
+
+
 
 }
