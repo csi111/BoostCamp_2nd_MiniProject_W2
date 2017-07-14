@@ -11,8 +11,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -23,10 +26,12 @@ public class MainActivity extends AppCompatActivity
 
     ArrayList<ItemData> itemDatas;
     LinearLayoutManager linearLayoutManager;
+    StaggeredGridLayoutManager staggeredLayoutManager;
     SwipeRefreshLayout swipeRefreshLayout;
     RecyclerAdapter recyclerAdapter;
     RecyclerView recyclerView;
-
+    ImageView change;
+    int flag = 1;
 
 
     @Override
@@ -36,7 +41,27 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        change = (ImageView)findViewById(R.id.changeSelector);
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+
+        change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(flag == 1) {
+                    flag = 0;
+                    change.setImageResource(R.drawable.ic_staggered_block);
+                }
+                else {
+                    flag=1;
+                    change.setImageResource(R.drawable.ic_linear_block);
+                }
+                makedata();
+            }
+        });
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -71,13 +96,23 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+
     private void makedata() {
 
+        if(flag == 1 ) {
 
-        linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
+            linearLayoutManager = new LinearLayoutManager(this);
+            linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+            recyclerView.setLayoutManager(linearLayoutManager);
 
+        }
+        else{
+
+            staggeredLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+
+            recyclerView.setLayoutManager(staggeredLayoutManager);
+        }
 
 
 
@@ -85,10 +120,10 @@ public class MainActivity extends AppCompatActivity
 
         // add data
         itemDatas = new ArrayList<ItemData>();
-        itemDatas.add(new ItemData("맛집1",R.drawable.photo,"설명?",R.drawable.check));
-        itemDatas.add(new ItemData("맛집2",R.drawable.photo,"설명?",R.drawable.checked));
-        itemDatas.add(new ItemData("맛집3",R.drawable.photo,"설명?",R.drawable.check));
-        itemDatas.add(new ItemData("맛집4",R.drawable.photo,"설명?",R.drawable.checked));
+        itemDatas.add(new ItemData("맛집1",R.drawable.res_photo1,"설명?",R.drawable.check));
+        itemDatas.add(new ItemData("맛집2",R.drawable.res_photo2,"설명?",R.drawable.checked));
+        itemDatas.add(new ItemData("맛집3",R.drawable.res_photo3,"설명?",R.drawable.check));
+        itemDatas.add(new ItemData("맛집4",R.drawable.res_photo4,"설명?",R.drawable.checked));
 
 
         recyclerAdapter = new RecyclerAdapter(itemDatas, this);

@@ -21,7 +21,6 @@
                 android:layout_width="355dp"
                 android:layout_height="210dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/photo"
                 android:id="@+id/photo"/>
 
 

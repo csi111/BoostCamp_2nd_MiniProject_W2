@@ -30,21 +30,21 @@ public class DBAdapter {
 
     static final String DATABASE_CREATE =
             "create table " + DATABASE_TABLE + " (_id integer primary key autoincrement, "
-                    + KEY_NAME+" text not null, "+ KEY_IMAGE + " integer not null, " + KEY_DESCRIPTION + " text not null, "
-                    + KEY_POPULARITY + " integer not null, "+ KEY_DIST + " integer not null ,"+ KEY_CHECK +" integer not null "+ ");";
-
-
+                                                        + KEY_NAME +" text not null, "
+                                                        + KEY_IMAGE + " integer not null, "
+                                                        + KEY_DESCRIPTION + " text not null, "
+                                                        + KEY_POPULARITY + " integer not null, "
+                                                        + KEY_DIST + " integer not null ,"
+                                                        + KEY_CHECK +" integer not null "+ ");";
     final Context context;
-
     DatabaseHelper DBHelper;
     SQLiteDatabase db;
+
 
     public DBAdapter(Context ctx) {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
     }
-
-
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
         DatabaseHelper(Context context) {
