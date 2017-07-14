@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="5dp"
-    android:layout_height="280dp">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imgvRestaurant"
@@ -18,7 +18,7 @@
         <RelativeLayout
             android:id="@+id/content_top"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/imgvRestaurant"
             android:padding="15dp">
 
@@ -43,7 +43,7 @@
             <TextView
                 android:id="@+id/txtvDescription"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/txtvName"
                 android:textColor="@color/grey"
                 android:textSize="@dimen/textSize_small"

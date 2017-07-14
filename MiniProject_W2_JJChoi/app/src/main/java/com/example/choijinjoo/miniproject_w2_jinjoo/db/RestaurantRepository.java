@@ -47,7 +47,7 @@ public class RestaurantRepository extends BaseRepository {
     public List<Restaurant> getRestaurantsOrderByDistance() {
         List<Restaurant> results = new ArrayList<>();
         try {
-            results.addAll(restaurantDao.queryBuilder().orderBy("distance", false).query());
+            results.addAll(restaurantDao.queryBuilder().orderBy("distance", true).query());
         } catch (SQLException e) {
             Log.e(TAG, e.getMessage());
         }

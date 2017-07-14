@@ -49,20 +49,25 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
 
         RuntimeExceptionDao<Restaurant, Integer> dao = getRestaurantRuntimeDao();
+
+        dao.create(makeMockData());
+    }
+
+    private List<Restaurant> makeMockData() {
         List<Restaurant> restaurants = new ArrayList<>();
         restaurants.add(new Restaurant("해우소", "img_restaurant1",
                 "꿀먹걸리가 인기메뉴고 맛있는 음식을 저렴하게 즐길 수 있는 해우소입니다.", 1.8, 4.5,
                 Calendar.getInstance().getTime(), false));
         restaurants.add(new Restaurant("삼교리동치미막국수", "img_restaurant1",
-                "막국수를 비빔으로 먹을지 물로 먹을지 고객이 만들어 먹는 삼교리동치미막국수입니다.", 1.7, 4.0,
+                "막국수를 비빔으로 먹을지 물로 먹을지 고객이 만들어 먹는 삼교리동치미막국수입니다.", 1.7, 2.0,
                 Calendar.getInstance().getTime(), false));
         restaurants.add(new Restaurant("오야오야", "img_restaurant1",
-                "꿀먹걸리가 인기메뉴고 맛있는 음식을 저렴하게 즐길 수 있는 해우소입니다.", 3.5, 2.5,
+                "오야오야 강추", 3.5, 2.5,
                 Calendar.getInstance().getTime(), false));
         restaurants.add(new Restaurant("까치둥지", "img_restaurant1",
                 "꿀먹걸리가 인기메뉴고 맛있는 음식을 저렴하게 즐길 수 있는 해우소입니다.", 2.0, 1.0,
                 Calendar.getInstance().getTime(), false));
-        dao.create(restaurants);
+        return restaurants;
     }
 
     /**
