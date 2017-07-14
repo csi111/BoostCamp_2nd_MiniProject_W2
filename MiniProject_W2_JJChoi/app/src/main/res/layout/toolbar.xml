@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
-    app:titleTextAppearance="@style/AppTheme.Toolbar.Title">
+    app:titleTextAppearance="@style/AppTheme.Toolbar.Title"
+    app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
 
 </android.support.v7.widget.Toolbar>
