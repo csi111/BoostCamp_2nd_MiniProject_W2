@@ -75,9 +75,10 @@ public class MainActivity extends AppCompatActivity
 
     }
     public void test(){
+        Log.d("DataBase_test","printAllData order by distance");
         ArrayList<Item> arrayList=DataBaseManager.getInstance().select("distance");
         for(int i=0;i<arrayList.size();i++){
-            Log.d("TEST",arrayList.get(i).getName());
+            Log.d("TEST","_id:"+arrayList.get(i).get_id()+" name:"+arrayList.get(i).getName());
         }
     }
 
