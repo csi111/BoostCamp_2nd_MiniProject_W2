@@ -45,4 +45,16 @@ public class Item {
     public String getName() {
         return name;
     }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public int getImagePath() {
+        return imagePath;
+    }
+
+    public Boolean getClicked() {
+        return clicked;
+    }
 }

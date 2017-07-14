@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class DBHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME = "restaurant.db";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 15;
     DBHelper DataBasehelper;
     private static final int ORDER_BY_DISTANCE=101;
     private static final int ORDER_BY_POPULARITY=102;
