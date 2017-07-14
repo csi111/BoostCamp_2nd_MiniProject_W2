@@ -48,18 +48,25 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.baseVi
         ImageView imgView;
         TextView name;
         TextView contents;
+        ImageView imgClick;
 
         public baseViewHolder(View itemView) {
             super(itemView);
             imgView=(ImageView)itemView.findViewById(R.id.imgMain);
             name=(TextView)itemView.findViewById(R.id.txtName);
             contents=(TextView)itemView.findViewById(R.id.txtContents);
+            imgClick=(ImageView)itemView.findViewById(R.id.imgClick);
         }
 
         public void bindView(Item item){
             imgView.setImageResource(item.getImagePath());
             name.setText(item.getName());
             contents.setText(item.getContents());
+            if(item.getClicked()){
+                imgClick.setImageResource(R.drawable.ic_clicked);
+            }else{
+                imgClick.setImageResource(R.drawable.ic_click);
+            }
         }
 
 

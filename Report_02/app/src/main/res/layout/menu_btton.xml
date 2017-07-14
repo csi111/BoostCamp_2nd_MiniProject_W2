@@ -5,28 +5,35 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/cardview_light_background"
-        android:text="거리순" />
+        android:text="거리순"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnPopulrity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/cardview_light_background"
-        android:text="인기순" />
+        android:text="인기순"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnRecent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/cardview_light_background"
-        android:text="최근순" />
+        android:text="최근순"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imgChangeLayout"

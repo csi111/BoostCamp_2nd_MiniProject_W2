@@ -50,6 +50,9 @@
                     android:layout_marginTop="8dp"
                     android:maxLines="1"
                     android:text="TextView"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
                     card:layout_constraintLeft_toLeftOf="parent"
                     card:layout_constraintTop_toTopOf="parent" />
 
@@ -63,8 +66,8 @@
                     android:layout_weight="1"
                     card:srcCompat="@drawable/ic_click"
                     card:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
                     card:layout_constraintRight_toRightOf="parent"
                     android:layout_marginEnd="8dp" />
 

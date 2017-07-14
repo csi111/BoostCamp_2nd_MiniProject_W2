@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 
 public class DataBaseManager {
-
     static private DataBaseManager instance;
 
     static public void init(Context ctx) {
@@ -43,10 +42,10 @@ public class DataBaseManager {
     }
 
     //select
-    public ArrayList<Item> select(){
+    public ArrayList<Item> select(String order){
         ArrayList<Item> itemArrayList=null;
         try {
-            QueryBuilder<Item,Integer> qb=getHelper().getStandardInfosDao().queryBuilder().orderBy("popularity",false);
+            QueryBuilder<Item,Integer> qb=getHelper().getStandardInfosDao().queryBuilder().orderBy(order,false);
             itemArrayList=(ArrayList<Item>)getHelper().getStandardInfosDao().query(qb.prepare());
         } catch (SQLException e) {
             e.printStackTrace();
@@ -88,10 +87,10 @@ public class DataBaseManager {
                 R.drawable.bluming,7,4,7));
         instance.insert(new Item("아임홈",
                 "입맛 까다로운 우리 엄마도 만족시킬 새하얀 설원 같은 밀크빙수! 내가 널 가장 처음 무너뜨리고 말겠다는 굳은 의지",
-                R.drawable.imhome,8,3,8));
+                R.drawable.imhome,8,3,9));
         instance.insert(new Item("혜선이떡볶이",
                 "홍대 유명 즉떡을 먹기 위해 이제 서울까지 가지 말자. 그 떡볶이의 기술을 그대로 이어받았으니. 심지어 더 맛있다는 평이 있을 정도!",
-                R.drawable.heseng,9,2,9));
+                R.drawable.heseng,9,2,8));
         instance.insert(new Item("홀드미",
                 "참 먹을 곳 많은 판교에서 굳이 이곳까지 오는 이유는 아주 간단하다. 그저 '맛있다'로 끝나지 않는 라떼와 캠벨포도쥬스가 있으니까.",
                 R.drawable.holdme,0,1,0));
