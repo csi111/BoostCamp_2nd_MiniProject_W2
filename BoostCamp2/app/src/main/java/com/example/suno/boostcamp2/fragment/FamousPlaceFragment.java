@@ -7,9 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.suno.boostcamp2.data.FamousPlace;
 import com.example.suno.boostcamp2.R;
@@ -42,6 +44,8 @@ public class FamousPlaceFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Context context = view.getContext();
+        dbHelper = new DBHelper(getActivity());
+        itemList = dbHelper.getData(orderedBy);
 
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -52,6 +56,8 @@ public class FamousPlaceFragment extends Fragment {
 
         recyclerAdapter = new RecyclerAdapter(itemList, getActivity());
         recyclerView.setAdapter(recyclerAdapter);
+
+        Log.d("ITEM", itemList.size()+"");
     }
 
     @Override
@@ -62,9 +68,6 @@ public class FamousPlaceFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        dbHelper = new DBHelper(getActivity());
-        itemList = dbHelper.getData(orderedBy);
     }
 
     public void stagger(boolean staggered){

@@ -123,14 +123,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public boolean checkNull(){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "SELECT count(*) FROM "+TABLE_NAME;
+        String sql = "SELECT * FROM "+TABLE_NAME;
         Cursor c = db.rawQuery(sql, null);
-        c.moveToFirst();
-        if(c.getCount() > 0){
+
+        if(c.moveToFirst()){ //record exit
             return false;
         }
-        else
+        else {//record not found
             return true;
+        }
     }
 
 }

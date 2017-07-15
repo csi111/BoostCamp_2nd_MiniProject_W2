@@ -100,20 +100,19 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void addData(){
+    public void addData(){ //인기, 거리, 시간
         dbHelper = new DBHelper(this);
-
         if(dbHelper.checkNull()){
             dbHelper.addData(new FamousPlace(RecyclerAdapter.TYPE_FAMOUS_PLACE, 1, "슈슈파나", "https://d2t7cq5f1ua57i.cloudfront.net/images/r_images/56386/53049/56386_53049_89_0_90_20167415735705.jpg"
                     ,"크림이 가득하고 색이 알록달록한 크림슈를 판매하는 슈슈파나입니다.", 77, 12,123, 0));
             dbHelper.addData(new FamousPlace(RecyclerAdapter.TYPE_FAMOUS_PLACE, 2, "디저트왕", "https://d2t7cq5f1ua57i.cloudfront.net/images/r_images/54386/55696/54386_55696_89_0_313_2016748443061.jpg"
-                    ,"디저트계의 끝판왕 디저트왕입니다. 남녀노소 모두가 함께할 수 있는 메뉴가 준비되어 있습니다. 연인과 가족과 함께 방문해보세요!", 1237, 232,223, 0));
+                    ,"디저트계의 끝판왕 디저트왕입니다. 남녀노소 모두가 함께할 수 있는 메뉴가 준비되어 있습니다. 연인과 가족과 함께 방문해보세요!", 1237, 232,2233, 0));
             dbHelper.addData(new FamousPlace(RecyclerAdapter.TYPE_FAMOUS_PLACE, 3, "이야기둘", "https://d2t7cq5f1ua57i.cloudfront.net/images/r_images/54519/51991/54519_51991_86_5_8099_201572552645459.jpg"
-                    ,"개인화로에 구워먹는 판교 맛집, 분위기 좋은 이야기 둘입니다. 이자카야 분위기, 이자카야 메뉴들도 준비되어 있습니다.", 2237, 2332,2323, 0));
+                    ,"개인화로에 구워먹는 판교 맛집, 분위기 좋은 이야기 둘입니다. 이자카야 분위기, 이자카야 메뉴들도 준비되어 있습니다.", 2237, 2332,232, 0));
             dbHelper.addData(new FamousPlace(RecyclerAdapter.TYPE_FAMOUS_PLACE, 4, "호야초밥", "https://d2t7cq5f1ua57i.cloudfront.net/images/r_images/55023/56447/55023_56447_89_0_2818_201652154715907.jpg"
-                    ,"줄서서먹는, 가성비좋은, 푸짐한맛집, 데이트코스, 남자친구랑 여자친구랑 오기 좋은, 연중무휴! 초밥의 세계에 빠져보실래요?", 12, 42, 33, 0));
-
+                    ,"줄서서먹는, 가성비좋은, 푸짐한맛집, 데이트코스, 남자친구랑 여자친구랑 오기 좋은, 연중무휴! 초밥의 세계에 빠져보실래요?", 12, 42, 333, 0));
         }
+
     }
 
     @Override
