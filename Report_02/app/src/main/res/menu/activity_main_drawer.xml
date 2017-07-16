@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_distance"
+            android:title="거리순" />
+        <item
+            android:id="@+id/nav_popularity"
+            android:title="인기순" />
+        <item
+            android:id="@+id/nav_recent"
+            android:title="최신순" />
+    </group>
+
+    <item android:title="Layout">
+        <menu>
+            <item
+                android:id="@+id/nav_Linear"
+                android:icon="@drawable/order_linear"
+                android:title="linear" />
+            <item
+                android:id="@+id/nav_stagg"
+                android:icon="@drawable/order_staggered"
+                android:title="staggered" />
+        </menu>
+    </item>
+
+</menu>
