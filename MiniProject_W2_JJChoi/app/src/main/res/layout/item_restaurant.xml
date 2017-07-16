@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgvRestaurant"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="160dp"/>
+
+        <RelativeLayout
+            android:id="@+id/content_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgvRestaurant"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imgvCheck"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/check_selector" />
+
+            <TextView
+                android:id="@+id/txtvName"
+                android:layout_toLeftOf="@id/imgvCheck"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_medium"
+                android:textStyle="bold"
+                tools:text="해우소" />
+
+            <TextView
+                android:id="@+id/txtvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtvName"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/textSize_small"
+                tools:text="JPEG doesn't support transparency (at least not in the variant that's widely used and supported). You need to use either PNG with an alpha channel, or the Windows .ICO format, which essentially is a DIB with either a colour key, or an alpha channel. Or use SVG, which is a vector format, and supports transparent background." />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
